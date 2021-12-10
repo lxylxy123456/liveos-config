@@ -17,6 +17,7 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #
 
-alias backlight='sudo python3 ~/python/snap/backlight.py'
-alias limit-cpu='python3 ~/python/snap/limit_cpu.py'
+SOURCE_DIR="$(dirname ${BASH_SOURCE})"
+alias backlight="sudo python3 ${BASH_SOURCE}/backlight.py"
+alias limit-cpu="python3 ${BASH_SOURCE}/limit_cpu.py"
 
