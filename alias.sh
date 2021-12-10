@@ -17,7 +17,7 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #
 
-SOURCE_DIR="$(dirname ${BASH_SOURCE})"
-alias backlight="sudo python3 ${BASH_SOURCE}/backlight.py"
-alias limit-cpu="python3 ${BASH_SOURCE}/limit_cpu.py"
+SOURCE_DIR="$(realpath "$(dirname ${BASH_SOURCE})")"
+alias backlight="sudo python3 ${SOURCE_DIR}/backlight.py"
+alias limit-cpu="python3 ${SOURCE_DIR}/limit_cpu.py"
 
