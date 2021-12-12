@@ -19,5 +19,5 @@
 
 set -xe
 
-sudo dnf install kernel-tools
+sudo dnf install kernel-tools -y
 
