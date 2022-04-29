@@ -19,7 +19,7 @@
 
 set -xe
 
-SOURCE_DIR="$(dirname ${BASH_SOURCE})"
+SOURCE_DIR="$(realpath "$(dirname ${BASH_SOURCE})")"
 bash "${SOURCE_DIR}/dconf.sh"
 echo ". ${SOURCE_DIR}/alias.sh" >> ~/.bashrc
 echo ". ${SOURCE_DIR}/alias.sh" >> ~/.bash_profile
