@@ -19,5 +19,15 @@
 
 set -xe
 
-sudo dnf install kernel-tools -y
+case "$(lsb_release -is)" in
+	Debian)
+		sudo apt-get install linux-cpupower -y
+		;;
+	Fedora)
+		sudo dnf install kernel-tools -y
+		;;
+	*)
+		echo "Error: unknown Linux distribution: $(lsb_release -is)"
+		;;
+esac
 

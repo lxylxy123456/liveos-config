@@ -41,9 +41,7 @@ def set_limit(limit) :
 			limit *= 100
 		freq = limit * 1000
 	else :
-		# Used to be 18446744073709551615 = (1 << 64) - 1
-		# Now is 15032385535 = 0x37fffffff
-		freq = 15032385535
+		freq = 18446744073709551615
 	set_cpu_freq(freq)
 
 def get_limit() :

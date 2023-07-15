@@ -17,6 +17,17 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #
 
+case "$(lsb_release -is)" in
+	Debian)
+		sudo apt-get install git -y
+		;;
+	Fedora)
+		;;
+	*)
+		echo "Warning: unknown Linux distribution: $(lsb_release -is)"
+		;;
+esac
+
 git clone https://github.com/lxylxy123456/liveos-config
 cd liveos-config
 ./autorun.sh
